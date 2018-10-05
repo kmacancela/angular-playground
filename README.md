@@ -1,4 +1,4 @@
-# MyFirstApp
+Using this repo as a playground where I can test and learn new AngularJS features.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
 
