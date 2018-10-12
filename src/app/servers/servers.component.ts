@@ -12,6 +12,9 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = "No server was created.";
   serverName = 'Testserver';
 
+  /*At the initiation of this component, this constructor will wait 2 seconds 
+    before the valye of allowNewServer changes to true. 
+  */
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -22,7 +25,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    this.serverCreationStatus = "Server was created.";
+    this.serverCreationStatus = "Server was created. Name is " + this.serverName;
   }
 
   onUpdateServerName(event: Event){

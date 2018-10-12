@@ -1,4 +1,7 @@
 <!--Event binding-->
+<!--The input line will trigger on the input event and update the value of serverName in
+    our component by calling the onUpdateServerName() function and passing the value that
+    was entered by the user.-->
 <!--<input
     type="text"
     class="form-control"
@@ -15,19 +18,29 @@
     [(ngModel)] = "serverName" 
 >
 
-<p>{{ serverName }}</p>
+<!-- <p>{{ serverName }}</p> -->
 
+<!--The constructor runs at the initiation of this component. After 2 seconds, the button will
+    become enabled. When button event is triggered by clicking, the onCreateServer() function
+    will run.-->
 <button 
     class="btn btn-primary"
     [disabled] = "!allowNewServer"
     (click) = "onCreateServer()"
->Add Server</button>
+>
+    Add Server
+</button>
+
 <!--String interpolation-->
 <p>{{ allowNewServer }}</p>
 <!--Property binding-->
 <p [innerText] = "allowNewServer"></p>
 
+<!--The value of serverCreationStatus changes when the button event is trigger when clicked by
+    calling onCreateServer() function which changes the value of serverCreationStatus.-->
 {{ serverCreationStatus }}
 
+<hr>
+<!--We can call another component multiple times in a different component-->
 <app-server></app-server>
 <app-server></app-server>
