@@ -10,8 +10,26 @@
             <!--class style-->
             <!-- <div class="app-servers"></div> -->
             
-            <!-- <success-alert></success-alert> -->
-            <!-- <warning-alert></warning-alert> -->
+            <!--<hr>
+            <h3>Assignment 1</h3>
+            <success-alert></success-alert>
+            <warning-alert></warning-alert> -->
+
+            <hr>
+            <h3>Assignment 2</h3>
+            <input 
+                type="text"
+                class="form-control"
+                [(ngModel)]="username"
+            >
+            <p>Username: {{  username }}</p>
+            <p>{{ usernameCreationStatus }}</p>
+            <button
+                class="btn btn-primary"
+                [disabled]="isUsernameEmpty()"
+                (click)="onCreateUsername()">
+                Enter Username
+            </button>
         </div>
     </div>
 </div>
