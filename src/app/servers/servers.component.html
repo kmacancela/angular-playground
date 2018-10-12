@@ -1,8 +1,20 @@
-<input
+<!--Event binding-->
+<!--<input
     type="text"
     class="form-control"
     (input)="onUpdateServerName($event)"
+> -->
+
+<!--Two way data binding: combining property and event binding -->
+<!--The ngModel line will trigger on the input event and update the value of serverName in 
+    our component automatically. It will also update the value of the input element if
+    we change serverName somewhere else.-->
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)] = "serverName" 
 >
+
 <p>{{ serverName }}</p>
 
 <button 
