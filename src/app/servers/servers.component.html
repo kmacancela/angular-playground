@@ -38,7 +38,13 @@
 
 <!--The value of serverCreationStatus changes when the button event is trigger when clicked by
     calling onCreateServer() function which changes the value of serverCreationStatus.-->
-{{ serverCreationStatus }}
+<!--{{ serverCreationStatus }}-->
+
+<!--Directives are usually added by using the attribute selector. The * is required because ngIf
+    is a structural directive, meaning it changes the structure of our DOM (it either adds this
+    element or it does not. I have added the condition to be as long as serverCreated is true, 
+    show the text below. The variable serverCreated is true once the button "Add Server" is clicked.-->
+<p *ngIf="serverCreated">Server was created! Server name is {{ serverName }}</p>
 
 <hr>
 <!--We can call another component multiple times in a different component-->
