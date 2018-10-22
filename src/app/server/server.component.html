@@ -1,1 +1,11 @@
-<p> Server with ID {{ serverId }} is {{ getServerStatus() }} </p>
+<!--Unlike structural directives, attribute directives don't add or remove elements. They only change
+    the element they were placed on.-->
+<!--We used ngStyle, an attribute directive, and property binding to configure it. ngStyle allows us
+    to dynamically assign a style. ngStyle allows to change the CSS style itself. ngClass allows us
+    to dynamicaaly add or remove CSS classes.-->
+
+<p 
+    [ngStyle] = "{backgroundColor: getColor()}"
+    [ngClass] = "{online: serverStatus === 'online'}"> 
+    Server with ID {{ serverId }} is {{ getServerStatus() }} 
+</p>

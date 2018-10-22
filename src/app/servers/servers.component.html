@@ -46,7 +46,14 @@
     show the text below. The variable serverCreated is true once the button "Add Server" is clicked.-->
 <p *ngIf="serverCreated">Server was created! Server name is {{ serverName }}</p>
 
+<!--The below is an extension of the ngIf directive mentioned above except I added an else condition.-->
+<!--<p *ngIf="serverCreated" else noServer>Server was created! Server name is {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>-->
+
 <hr>
 <!--We can call another component multiple times in a different component-->
-<app-server></app-server>
-<app-server></app-server>
+<!--Will lop thorough all elements in the array and assign individual element to this dynamic server
+    variable.-->
+<app-server *ngFor = "let server of servers"></app-server>
