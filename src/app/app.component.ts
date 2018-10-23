@@ -14,6 +14,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   username = '';
   usernameCreationStatus = 'No username created yet.'
+  showSecret = false;
+  log = [];
 
   isUsernameEmpty(){
     if(this.username === '') return true;
@@ -23,5 +25,10 @@ export class AppComponent {
   onCreateUsername(){
     this.usernameCreationStatus = 'Username ' + this.username + ' was created.';
     this.username = '';
+  }
+
+  getToggleDetails(){
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }
